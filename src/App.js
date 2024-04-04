@@ -17,7 +17,8 @@ export default () => {
 
  
   useEffect(()=>{
-
+   clearInterval(setInterval)
+    setInterval(() => {
     const loadAll = async () =>{
      
       let list = await Tmdb.getHomeList()
@@ -39,6 +40,8 @@ export default () => {
 
 
     loadAll()
+
+  }, 4500);
 },[])
 
 
